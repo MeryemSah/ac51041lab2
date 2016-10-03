@@ -20,7 +20,7 @@ function drawCircle()
     
     var circles = canvas.selectAll("circle").data(data).enter().append("circle");
     
-    circles.attr("cx",function (d){return d[0]}).attr("cy",function(d){return d[1]}).attr("r",6});
+    circles.attr("cx",function (d){return d[0];}).attr("cy",function(d){return d[1];}).attr("r",6);
 }
 window.onload=drawCircle;
 
