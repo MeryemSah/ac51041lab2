@@ -14,7 +14,7 @@ function drawCircle()
     var data=[[20,40,5],[20,80,20],[20,120,30]];
     
     var h = 350;
-    var w = 250;
+    var w = 350;
    
     var canvas = d3.select("body").append("svg").attr("width",w).attr("Height",h);
     
