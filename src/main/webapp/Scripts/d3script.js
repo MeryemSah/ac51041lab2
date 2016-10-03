@@ -11,7 +11,7 @@ window.onload=d3draw;
 
 function drawCircle()
 {
-    var data=[[20,40,60],[80,100,120],[140,160,180]];
+    var data=[[20,40,5],[80,100,20],[140,160,30]];
     
     var h = 350;
     var w = 250;
