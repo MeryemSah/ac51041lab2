@@ -11,10 +11,10 @@ window.onload=d3draw;
 
 function drawCircle()
 {
-    var data=[[10,20,46],[45,55,20],[25,35,15]];
+    var data=[[20,40,60],[80,100,120],[140,160,180]];
     
-    var h = 500;
-    var w = 600;
+    var h = 350;
+    var w = 250;
    
     var canvas = d3.select("body").append("svg").attr("width",w).attr("Height",h);
     
