@@ -8,7 +8,7 @@
 
 window.onload=d3draw;
 */
-
+/*
 function drawCircle()
 {
     var data=[[20,40,5],[20,80,10],[20,120,15]];
@@ -24,3 +24,29 @@ function drawCircle()
 }
 window.onload=drawCircle;
 
+*/
+function geoDataUK()
+{
+    var path = d3.geo.path();
+    /*
+    d3.json("http://ac32007.cloudapp.net:8080/Circles/Towns/5", function(json){
+        svg.selectAll("path").data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path);
+        
+    });
+    */
+   var url = "http://ac32007.cloudapp.net:8080/Circles/Towns/5";
+   var d = d3.json(url, function(error,json)
+   {
+       if(error)
+       {
+            return console.error(error);
+       }
+       console.log(json);
+   });
+    
+    d3.select("body").selectAll("p").data(d).enter().append("p").text(function(dd){return dd;});
+}
+window.onload=d3draw;
