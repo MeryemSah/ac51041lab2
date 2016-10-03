@@ -11,7 +11,7 @@ window.onload=d3draw;
 
 function drawCircle()
 {
-    var data=[[20,40,5],[20,80,20],[20,120,30]];
+    var data=[[20,40,5],[20,80,10],[20,120,15]];
     
     var h = 350;
     var w = 350;
@@ -20,7 +20,7 @@ function drawCircle()
     
     var circles = canvas.selectAll("circle").data(data).enter().append("circle");
     
-    circles.style("stroke", "red").style("fill", "blue").attr("cx",function (d){return d[0];}).attr("cy",function(d){return d[1];}).attr("r", function(d){return d[2];});
+    circles.style("stroke", "red").style("fill", "blue").attr("cy",function (d){return d[0];}).attr("cx",function(d){return d[1];}).attr("r", function(d){return d[2];});
 }
 window.onload=drawCircle;
 
