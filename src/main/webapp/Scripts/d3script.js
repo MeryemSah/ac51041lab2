@@ -16,7 +16,7 @@ function drawCircle()
     var h = 500;
     var w = 600;
    
-    var canvas = d3.select("body").selectAll("svg").attr("Width",w).attr("Height",h);
+    var canvas = d3.select("body").append("svg").attr("width",w).attr("Height",h);
     
     var circles = canvas.selectAll("circle").data(data).enter().append("circle");
     
