@@ -38,15 +38,16 @@ function geoDataUK()
     });
     */
    var url = "http://ac32007.cloudapp.net:8080/Circles/Towns/5";
-   var d = d3.json(url, function(error,json)
+   d3.json(url, function(error,json)
    {
        if(error)
        {
             return console.error(error);
        }
        console.log(json);
+       d3.select("body").selectAll("p").data(json).enter().append("p").text(function(dd){return dd;});
    });
     
-    d3.select("body").selectAll("p").data(d).enter().append("p").text(function(dd){return dd;});
+    
 }
 window.onload=d3draw;
